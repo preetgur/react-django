@@ -1,0 +1,89 @@
+.header
+{
+    display: flex;
+    background: black;
+    color: white;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.header__logo
+{
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 2px;
+    border-color: mediumturquoise;
+}
+
+.header__options
+{
+    display:flex;
+}
+
+.header__options> div:hover{
+    border-color : mediumturquoise;
+    
+}
+
+.header__options > div
+{
+    border: 2px solid;
+    border-radius: 2px;
+    padding: 10px;
+    font-weight: bold;
+    color :#f3ebdd;
+
+}
+
+.optionLogin
+{
+    margin-right: 10px;
+}
+
+.optionSignup
+{
+    color:green;
+    font-weight: bold;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    
+    body
+    {
+        background: cyan;
+    }
+
+    .header{
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        padding-top: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .header__logo
+    {
+        border: none;
+        font-size: xx-large;
+        font-weight: bolder;
+        color:mediumturquoise;
+        padding: 0px;
+    }
+    .header__options
+        {
+            display:flex;
+        }
+
+        .header__options> div:hover{
+            color : mediumturquoise;
+            border-color: #f3ebdd;
+        }
+    
+   
+
+  }
+  
