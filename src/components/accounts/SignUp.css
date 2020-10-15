@@ -1,0 +1,144 @@
+.signup_container
+{
+    border: 1px solid #DBDBDB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:10px;
+    /* margin-top: 50px; */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+
+}
+
+.signup__logo
+{
+    
+    padding: 30px;
+
+    border: none;
+    font-size: xx-large;
+    font-weight: bolder;
+  
+
+}
+
+.signup__logo > a
+{
+    text-decoration: none;
+    color: mediumturquoise;
+}
+
+.signup__logo >h1{
+    font-weight: 600;
+    font-size: xxx-large;
+}
+
+.signup
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup_container > input
+{
+    padding:10px;
+    margin-bottom: 10px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    width:80%;
+}
+
+.signup_container > button
+{
+    width: 80%;
+    color: white;
+    background: #B2DFFC;
+    border:none;
+    padding:8px;
+    border-radius: 2px;
+    margin-bottom: 30px;
+}
+
+.login__or
+{
+    margin-top: 10px;
+}
+
+.login__or >p {
+  
+    display: flex;
+    flex-direction: row;
+    color: gray;
+    font-size: smaller;
+    font-weight: 600;
+  
+  }
+  .login__or > p:before, p:after{
+    content: "";
+    width: 100px;
+    min-width: 130px;
+    flex: 1;
+    border-bottom: 1px solid lightgray;
+  
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+
+  }
+  
+
+  .login__forgotPassword
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90px;
+    justify-content: space-evenly;
+  }
+
+.login__forgotPassword>h3{
+    color: #385194;
+    font-weight: 500;
+    display: flex;
+    margin: auto;
+   
+}  
+
+.login__forgotPassword > h3 >span
+{
+    margin-right: 5px;
+}
+
+  .signup_container2
+{
+    border: 1px solid #DBDBDB;
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+   align-items: center;
+    padding:20px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+
+}
+
+.signup_container2>h3
+{
+    font-weight: 200;
+}
+
+.signup_container2>span>a{
+
+    color: #48D1CC;
+    font-weight: bold;
+    margin: 5px;
+    text-decoration: none;
+
+}

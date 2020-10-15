@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./Header.css"
 
 function Header() {
@@ -11,9 +12,17 @@ function Header() {
             
 
             <div className="header__options">
-                <div className="optionLogin">Login</div>
+                <div className="optionLogin">
+                    <Link to="/login">
+                        Login
+                    </Link>
+                </div>
+                
                 <div className="optionSignup">
-                    SignUp
+                    <Link to="/signup">
+                        SignUp
+                    </Link>
+                    
                 </div>
             </div>
         </div>

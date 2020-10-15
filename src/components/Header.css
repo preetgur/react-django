@@ -20,6 +20,11 @@
     display:flex;
 }
 
+.header__options >div >a
+{
+    text-decoration: none;
+    color: white;
+}
 .header__options> div:hover{
     border-color : mediumturquoise;
     
@@ -51,10 +56,7 @@
 
 @media only screen and (max-width: 600px) {
     
-    body
-    {
-        background: cyan;
-    }
+   
 
     .header{
         flex-direction: column;
@@ -76,6 +78,11 @@
     .header__options
         {
             display:flex;
+        }
+
+        .header__options>div
+        {
+            padding:5px;
         }
 
         .header__options> div:hover{
