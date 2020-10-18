@@ -1,26 +1,23 @@
-import React, { useEffect, useRef, useState } from "react"
-import { Link, useHistory } from "react-router-dom"
-import "./Login.css"
-import { useAuth } from "./AuthProvider"
+import React, { useEffect, useRef, useState } from 'react'
+import { Link, useHistory } from 'react-router-dom';
+import { useAuth } from './AuthProvider';
+import "./ForgotPassword.css"
 
-const Login = () => {
-    
+function ForgotPassword() {
     const history = useHistory();
     const emailRef = useRef()
-    const passwordRef = useRef()
+    // const passwordRef = useRef()
    
   
     const [error,setError] = useState("");
+    const [message,setMessage] = useState("");
+
     const [loading,setLoading] = useState(false);
 
 
     // use destructuring useAuth
-    const {login,currentUser} = useAuth()
+    const {resetPassword,currentUser} = useAuth()
 
-    const focus = () =>
-    {
-        emailRef.current.focus()
-    }
 
     useEffect(() => {
         emailRef.current.focus()
@@ -33,12 +30,14 @@ const Login = () => {
 
 
         try {
+            setMessage("")
             setError('')
             setLoading(true)
 
-            await login(emailRef.current.value,passwordRef.current.value)
+            // await login(emailRef.current.value,passwordRef.current.value)
+            await resetPassword(emailRef.current.value)
+            setMessage("Check Your inbox for further instruction")
             
-            history.push('/')
 
         }
          catch (e) {
@@ -54,9 +53,9 @@ const Login = () => {
     return (
         <div className="login">
         <form onSubmit={handleSubmit}>
-        <div className="login_container">
+        <div className="dashboard_container">
             
-            <div className="login__logo">
+            <div className="dashboard__logo">
               
             <Link to="/">
                  ReactDjango
@@ -66,20 +65,22 @@ const Login = () => {
             </div>
 
             { error && <p className="signup__error"> {error}</p>}
+            { message && <p className="signup__error"> {message}</p>}
 
-            <input type="text" placeholder=" email" ref={emailRef} />
+
+            <input type="text" placeholder=" email" ref={emailRef}  />
          
 
 
-            <input type="password" placeholder="Password" ref={passwordRef} />
+            {/* <input type="password" placeholder="Password" ref={passwordRef} /> */}
 
-            <button disabled={loading} type="submit">Log In</button>
+            <button disabled={loading} type="submit">Reset Password</button>
 
-            <div className="login__forgotPassword">
+            <div className="dashboard__login">
             
-            <h3>  Log in with Facebook</h3>
-            <Link to="/forgot-password"> 
-            <small>Forgot password?</small>
+            <p>Try ?</p>
+            <Link to="/login"> 
+                Login
             </Link>
              </div>
             
@@ -101,7 +102,4 @@ const Login = () => {
     )
 }
 
-
-
-
-export default Login
+export default ForgotPassword

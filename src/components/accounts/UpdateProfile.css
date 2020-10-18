@@ -1,0 +1,12 @@
+.update_container2 >a
+{
+
+    text-decoration: none;
+    background: #ef2020;
+    padding: 10px;
+    color: white;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
